@@ -1,0 +1,11 @@
+:root {
+    --white: #ffffff;
+    --black: #212121;
+    --first: #D5DD3C;
+    --gray-background:#535353;
+    --gray-inputs: #cccccc;
+    --gray-header:#323232; 
+}
+html{
+    font-family: 'Roboto', sans-serif;
+}
