@@ -1,0 +1,225 @@
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-background);
+  text-align: start;
+}
+.nav {
+  display: none;
+}
+.btn-nav {
+  display: none;
+}
+.container-aside-info {
+  display: none;
+}
+.main-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  height: 69rem;
+  text-align: center;
+  background-image: url(../../assets/image/main-phone.png);
+  opacity: 0.9;
+}
+h1 {
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: bold;
+  margin-top: 5rem;
+  padding: 2rem;
+}
+h1 span {
+  color: var(--first);
+  margin-left: 12rem;
+}
+.main-info {
+  color: var(--white);
+  font-size: 2rem;
+  width: 90%;
+  line-height: 4rem;
+}
+.sec-features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10rem;
+}
+
+.reservation {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/reservations.png);
+}
+.schedule {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/schedule.jpg);
+}
+.membership {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/membership.jpg);
+}
+.contact-suggestion {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/contact.png);
+}
+
+.card-features h3 {
+  font-size: 4rem;
+  color: var(--first);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.text-features {
+  width: 15rem;
+  color: var(--white);
+  font-size: 1.4rem;
+}
+.contact {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 10rem;
+}
+.title-contact-sec {
+   margin-left: 25rem;
+}
+.form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 90%;
+   background-color: var(--white);
+   border-radius: 2rem;
+}
+.form label{
+   font-size: 2rem;
+   margin: 1.5rem;
+}
+.form input, select {
+   width: 90%;
+   height: 3.5rem;
+   border-radius: 5px;
+   background-color: var(--gray-inputs);
+}
+.form textarea {
+   width: 90%;
+   height: 10rem;
+   border-radius: 1rem;
+   background-color: var(--gray-inputs);
+   text-align:start;
+}
+.form button{
+   margin: 1rem;
+   width: 7.5rem;
+   height: 3.5rem;
+   background-color: var(--first);
+   border-radius: 5px; 
+}
+.activities {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+   padding-top:10rem;
+}
+.card h3{
+   color: var(--white);
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 4rem;
+}
+.crossfit {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/crossfit.jpg);
+}
+.box {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/box.png);
+}
+.functional {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/functional.jpg);
+}
+.spinning {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/spinning.png);
+}
+.fitness {
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/fitness.jpg);
+}
+.sec-membership {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2rem;
+   padding: 10rem 0 10rem 0;
+}
+.card-membership {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap:3.5rem;
+   width: 35rem;
+   height: 40rem;
+   border-radius: 3rem;
+   text-align: center;
+}
+.card-membership h3 {
+   font-size: 3rem;
+   font-weight: bold;
+   text-transform: uppercase;
+   color: var(--first);
+   margin-top: 2.5rem;
+}
+.card-membership p {
+   width: 80%;
+   font-size: 2rem;
+   color: var(--white);
+   margin-top: 2rem;
+   text-transform: uppercase;
+}
+.card-membership a {
+   text-decoration: none;
+   color: var(--white);
+   font-size: 2rem;
+}
+.membership-only {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/onlyclasses.png);
+}
+.membership-classic {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/classic-membership.png);
+}
+.membership-black {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../assets/image/black-memebership.png);
+}
+.story {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 10rem 0 20rem 0;
+}
+.text-story-article {
+   width: 90%;
+   height:16rem ;
+   background-color: var(--gray-inputs);
+   border-radius: 1rem;
+   text-align: center;
+}
+.text-story-article p {
+   font-size: 1.4rem;
+   line-height: 2rem;
+   margin: 2rem;
+}
+
+
+
+
+
+
+

@@ -10,5 +10,31 @@ html {
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
 }
+h2{
+  
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: bold;
+    padding: 2rem;
+    font-size: 7rem;
 
+}
+h2 span{
+    color: var(--first);
+    margin-left: 16rem;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 35rem;
+    height: 25rem;
+    border-radius: 3rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+  }
 
