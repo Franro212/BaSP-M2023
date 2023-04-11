@@ -38,8 +38,14 @@ header {
 }
 @media (min-width: 601px) and (max-width: 1024px) {
     header {
-        gap: 30rem;
+
+        gap: 10rem;
         height: 20rem;
+    }
+    .btn-burger {
+        font-size: 7rem;
+        width: 8rem;
+        height: 7rem;
     }
     .logo {
         gap: 5px;

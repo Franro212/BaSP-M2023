@@ -1,0 +1,36 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    height: 50rem;
+    background-color: var(--gray-inputs);
+}
+.btn-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    text-decoration: none;
+}
+.btn-footer img{
+    width: 52px;
+    height: 52px;
+
+}
+.btn-footer p {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: var(--black);
+
+}
+.info-footer {
+    text-align: center;
+    font-size: 2rem
+
+}
+.info-footer span {
+    display: block;
+    text-transform: uppercase;
+
+}

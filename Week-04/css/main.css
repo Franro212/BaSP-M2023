@@ -4,6 +4,20 @@ main {
   background-color: var(--gray-background);
   text-align: start;
 }
+.card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 5rem;
+   width: 35rem;
+   height: 25rem;
+   border-radius: 3rem;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   text-align: center;
+ }
 .nav {
   display: none;
 }
@@ -21,7 +35,9 @@ main {
   height: 69rem;
   text-align: center;
   background-image: url(../../assets/image/main-phone.png);
-  opacity: 0.9;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h1 {
   color: var(--white);
@@ -45,31 +61,26 @@ h1 span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3rem;
   padding-top: 10rem;
 }
-
 .reservation {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../../assets/image/reservations.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../../assets/image/reservations.png);
 }
 .schedule {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../../assets/image/schedule.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/image/schedule.jpg);
 }
 .membership {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../../assets/image/membership.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../../assets/image/membership.jpg);
 }
 .contact-suggestion {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../../assets/image/contact.png);
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/image/contact.png);
 }
-
-.card-features h3 {
-  font-size: 4rem;
-  color: var(--first);
-  text-transform: uppercase;
-  font-weight: bold;
+.card h3 {
+   color: var(--first);
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: 4rem;
 }
 .text-features {
   width: 15rem;
@@ -85,7 +96,7 @@ h1 span {
 .title-contact-sec {
    margin-left: 25rem;
 }
-.form {
+.form, .cont-form {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -93,7 +104,7 @@ h1 span {
    background-color: var(--white);
    border-radius: 2rem;
 }
-.form label{
+.form label {
    font-size: 2rem;
    margin: 1.5rem;
 }
@@ -110,7 +121,7 @@ h1 span {
    background-color: var(--gray-inputs);
    text-align:start;
 }
-.form button{
+.form button {
    margin: 1rem;
    width: 7.5rem;
    height: 3.5rem;
@@ -124,11 +135,8 @@ h1 span {
    gap: 2rem;
    padding-top:10rem;
 }
-.card h3{
+.activities article h3 {
    color: var(--white);
-   text-transform: uppercase;
-   font-weight: bold;
-   font-size: 4rem;
 }
 .crossfit {
      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -215,6 +223,72 @@ h1 span {
    font-size: 1.4rem;
    line-height: 2rem;
    margin: 2rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+   .main-sec{
+      height: 115rem;
+      gap: 7rem;
+    }
+   .card {
+      gap: 5rem;
+      width: 71rem;
+      height: 46rem;
+    }
+   h1 {
+      text-align: start;
+      font-size: 10rem;
+    }
+    h1 span {
+      margin-left: 25rem;
+    }
+    .main-info {
+      font-size: 3.5rem;
+      width: 80%;
+      line-height: 8rem;
+    }
+    .card h3{
+       font-size: 7rem;
+    }
+    .text-features {
+      width: 50rem;
+      font-size: 4.5rem;
+    }
+   .title-contact-sec {
+      margin-left: 40rem;
+   }
+   .form {
+      flex-direction: row;
+      flex-wrap: wrap;
+   }
+   .cont-form {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+   }
+   .cont-form label {
+     width: 90%;
+   }
+   
+   .form textarea {
+      margin-left: 1.5rem;
+      width: 95%;
+   }
+   .form button {
+      width: 15rem;
+      margin-left: 25rem;
+   }
+   .card-membership {
+      width: 70rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+   .card-membership h3 {
+      font-size: 4rem;
+   }
+}
+@media  (min-width: 1025px) {
+
 }
 
 

@@ -11,30 +11,27 @@ html {
     font-size: 62.5%;
 }
 h2{
-  
     text-transform: uppercase;
     color: var(--white);
     font-weight: bold;
     padding: 2rem;
-    font-size: 7rem;
-
+    font-size: 7rem;  
 }
 h2 span{
     color: var(--first);
     margin-left: 16rem;
 }
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    width: 35rem;
-    height: 25rem;
-    border-radius: 3rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    text-align: center;
-  }
+@media (min-width: 601px) and (max-width: 1024px) {
+    h2{
+        font-size: 9.5rem;  
+    }
+    h2 span{
+        display: block;
+        margin-left: 30rem;  
+    }
+}
+@media  (min-width: 1025px) {
+
+}
+
 

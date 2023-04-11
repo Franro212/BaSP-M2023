@@ -91,19 +91,19 @@
           <span class="title-sec-features"> res </span>
         </h2>
         <article class="card reservation">
-          <h3 class="title-feture">reservations</h3>
+          <h3>reservations</h3>
           <p class="text-features">Chose your favorit class and ensure your place</p>
         </article>
         <article class="card schedule">
-          <h3 class="title-feture">schedule</h3>
+          <h3>schedule</h3>
           <p class="text-features">Monday to saturday 08 am till 08 pm</p>
         </article>
         <article class="card membership">
-          <h3 class="title-feture">memberships</h3>
+          <h3>memberships</h3>
           <p class="text-features">Pick wich one is best for you</p>
         </article>
         <article class="card contact-suggestion">
-          <h3 class="title-feture">contact and suggestions</h3>
+          <h3>contact and suggestions</h3>
           <p class="text-features">Your opinion is important to us, it helps us improve</p>
         </article>
     </section>
@@ -113,19 +113,27 @@
         <span class="title-contact-sec">us</span>
       </h2>
       <form class="form">
-        <label for="name"> Name </label>
-        <input id="name" required placeholder="name" type="text">
-        <label for="surname"> Surname </label>
-        <input id="surname" required placeholder="surname" type="text">
-        <label for="E-mail"> E-mail </label>
-        <input id="E-mail" required placeholder="E-mail" type="email">
-        <label for="contact"> Contact reason </label>
-        <select id="contact">
-          <option >I want to know the memberships and costs</option>
-          <option >I want to make a query or suggestion</option>
-          <option >I want to make a claim</option>
-          <option >Other</option>
-        </select>
+        <div class="cont-form">
+          <label for="name"> Name </label>
+          <input id="name" required placeholder="name" type="text">
+        </div>
+        <div class="cont-form">
+          <label for="surname"> Surname </label>
+          <input id="surname" required placeholder="surname" type="text">
+        </div>
+        <div class="cont-form">
+          <label for="E-mail"> E-mail </label>
+          <input id="E-mail" required placeholder="E-mail" type="email">
+        </div>
+        <div class="cont-form">
+          <label for="contact"> Contact reason </label>
+          <select id="contact">
+            <option >I want to know the memberships and costs</option>
+            <option >I want to make a query or suggestion</option>
+            <option >I want to make a claim</option>
+            <option >Other</option>
+          </select>
+        </div>
         <label class="text-label" for="Message"> Message </label>
         <textarea  class="text-area" required placeholder="Write here..." cols="30" rows="10"></textarea>
           <button  type="submit">Send</button>
@@ -207,7 +215,7 @@
         <p class="text-footer">Mega rocket GYM</p>
       </a>
       <p class="info-footer">
-        <span class="info-footer-sec"> mega rocket sa </span>
+        <span> mega rocket sa </span>
         All rights reserved. 2023©
       </p>
     </footer>
