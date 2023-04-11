@@ -16,13 +16,11 @@ footer {
 .btn-footer img{
     width: 52px;
     height: 52px;
-
 }
 .btn-footer p {
     margin-top: 1rem;
     font-size: 2rem;
     color: var(--black);
-
 }
 .info-footer {
     text-align: center;
@@ -32,5 +30,19 @@ footer {
 .info-footer span {
     display: block;
     text-transform: uppercase;
+
+}
+@media (min-width: 601px) and (max-width:1024px) {
+    footer {
+        height: 28rem;
+        gap: 8rem;
+    }
+    .cont-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 11rem;
+    }
+}
+@media  (min-width: 1025px) {
 
 }
