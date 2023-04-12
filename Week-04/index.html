@@ -39,7 +39,7 @@
     <main id="home">
       <aside>
         <nav class="nav">
-          <ul>
+          <ul >
             <li class="nav-li">
               <a  href="#home">home</a>
             </li>
@@ -65,100 +65,111 @@
             <img class="img-btn" src="../assets/image/login-icon.png" alt="login">
           </a>
         </nav>
-        <div class="container-aside-info">
-          <img src="../assets/image/mapa 1.png" alt="icono-map">
-          <p>Av. Pellegrini 3535</p>
-          <img src="../assets/image/ring-phone 1.png" alt="icono-phone">
-          <p>+464 206 96</p>
+        <div class="cont-aside-info">
+          <div class="cont-ubi">
+            <img src="../assets/image/mapa 1.png" alt="icono-map">
+            <p>Av. Pellegrini 3535</p>
+          </div>
+          <div class="cont-number">
+            <img src="../assets/image/ring-phone 1.png" alt="icono-phone">
+            <p>+464 206 96</p>
+          </div>
         </div>
       </aside>
-      <section class="main-sec">
-        <h1 >
-          don`t sit
-          <span> get fit </span>
-        </h1>
-        <p class="main-info">
-          Your best version is waiting for you, join Mega Rocket Gym today.
-        </p>
-        <p class="main-info">
+      <div class="cont-main">
+        <section class="main-sec">
+          <h1 >
+            don`t sit
+            <span> get fit </span>
+          </h1>
+          <p class="main-info">
+            Your best version is waiting for you, join Mega Rocket Gym today.
+          </p>
+          <p class="main-info">
             In this app you can choose our best personal trainers and the best classes
             and have a bunch of privileges with our different memberships
-        </p>
+          </p>
+        </section>
+        <section class="sec-features" id="features">
+          <h2>
+            featu
+            <span class="title-sec-features"> res </span>
+          </h2>
+          <div class="cont-features">
+            <article class="card reservation">
+              <h3>reservations</h3>
+              <p class="text-features">Chose your favorit class and ensure your place</p>
+            </article>
+            <article class="card schedule">
+              <h3>schedule</h3>
+              <p class="text-features">Monday to saturday 08 am till 08 pm</p>
+            </article>
+            <article class="card membership">
+              <h3>memberships</h3>
+              <p class="text-features">Pick wich one is best for you</p>
+            </article>
+            <article class="card contact-suggestion">
+              <h3>contact and suggestions</h3>
+              <p class="text-features">Your opinion is important to us, it helps us improve</p>
+            </article>
+          </div>
       </section>
-      <section class="sec-features" id="features">
+      <section class="contact" id="contact">
         <h2>
-          featu
-          <span class="title-sec-features"> res </span>
+          contact
+          <span class="title-contact-sec">us</span>
         </h2>
-        <article class="card reservation">
-          <h3>reservations</h3>
-          <p class="text-features">Chose your favorit class and ensure your place</p>
-        </article>
-        <article class="card schedule">
-          <h3>schedule</h3>
-          <p class="text-features">Monday to saturday 08 am till 08 pm</p>
-        </article>
-        <article class="card membership">
-          <h3>memberships</h3>
-          <p class="text-features">Pick wich one is best for you</p>
-        </article>
-        <article class="card contact-suggestion">
-          <h3>contact and suggestions</h3>
-          <p class="text-features">Your opinion is important to us, it helps us improve</p>
-        </article>
-    </section>
-    <section class="contact" id="contact">
-      <h2>
-        contact
-        <span class="title-contact-sec">us</span>
-      </h2>
-      <form class="form">
-        <div class="cont-form">
-          <label for="name"> Name </label>
-          <input id="name" required placeholder="name" type="text">
-        </div>
-        <div class="cont-form">
-          <label for="surname"> Surname </label>
-          <input id="surname" required placeholder="surname" type="text">
-        </div>
-        <div class="cont-form">
-          <label for="E-mail"> E-mail </label>
-          <input id="E-mail" required placeholder="E-mail" type="email">
-        </div>
-        <div class="cont-form">
-          <label for="contact"> Contact reason </label>
-          <select id="contact">
-            <option >I want to know the memberships and costs</option>
-            <option >I want to make a query or suggestion</option>
-            <option >I want to make a claim</option>
-            <option >Other</option>
-          </select>
+        <form class="form">
+          <div class="cont-form">            
+            <div class="cont-input-label">
+              <label for="name"> Name </label>
+              <input id="name" required placeholder="name" type="text">
+            </div>
+            <div class="cont-input-label"">
+              <label for="surname"> Surname </label>
+              <input id="surname" required placeholder="surname" type="text">
+            </div>
+            <div class="cont-input-label"">
+              <label for="E-mail"> E-mail </label>
+              <input id="E-mail" required placeholder="E-mail" type="email">
+            </div>
+            <div class="cont-input-label"">
+              <label for="contact"> Contact reason </label>
+              <select id="contact">
+                <option >I want to know the memberships and costs</option>
+                <option >I want to make a query or suggestion</option>
+                <option >I want to make a claim</option>
+                <option >Other</option>
+              </select>
+            </div>
         </div>
         <label class="text-label" for="Message"> Message </label>
         <textarea  class="text-area" required placeholder="Write here..." cols="30" rows="10"></textarea>
-          <button  type="submit">Send</button>
-        </form>
+        <button  type="submit">Send</button>
+      </form>
     </section>
     <section class="activities" id="activities">
       <h2>
         activi
         <span> ties </span>
       </h2>
-      <article class="card crossfit">
-        <h3 class="title-activities">crossfit</h3>
-      </article>
-      <article class="card box">
-        <h3 class="title-activities">box</h3>
-      </article>
-      <article class="card functional">
-        <h3 class="title-activities">functional</h3>
-      </article>
-      <article class="card spinning">
-        <h3 class="title-activities">spinning</h3>
-      </article>
-      <article class="card fitness">
-        <h3 class="title-activities">fitness</h3>
-      </article>
+      <div class="cont-activities">
+        <article class="card crossfit">
+          <h3 class="title-activities">crossfit</h3>
+        </article>
+        <article class="card box">
+          <h3 class="title-activities">box</h3>
+        </article>
+        <article class="card functional">
+          <h3 class="title-activities">functional</h3>
+        </article>
+        <article class="card spinning">
+          <h3 class="title-activities">spinning</h3>
+        </article>
+        <article class="card fitness">
+          <h3 class="title-activities">fitness</h3>
+        </article>
+      </div>
     </section>
     <section class="sec-membership" id="memberships">
       <h2 class="title-member">
@@ -166,10 +177,10 @@
         <span class="sec-title-member"> ships </span>
       </h2>
       <article class="card-membership membership-only">
-      <h3 class="second-title-member text-member-black">black membership</h3>
-      <p >free access to the gym</p>
-      <p >free access to classes with registration</p>
-      <p >personalized monitoring & coaching</p>
+        <h3 class="second-title-member text-member-black">black membership</h3>
+        <p >free access to the gym</p>
+        <p >free access to classes with registration</p>
+        <p >personalized monitoring & coaching</p>
         <a href="#"> schedule view </a>
       </article>
       <article class="card-membership membership-classic">
@@ -200,6 +211,7 @@
         </p>
       </article>
     </section>
+  </div>
   </main>
     <footer>
       <div class="cont-footer">      
@@ -222,4 +234,5 @@
       </p>
     </footer>
   </body>
-</html>
+  </html>
+  

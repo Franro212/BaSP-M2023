@@ -9,6 +9,10 @@
 html {
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
+    height: 100%;
+}
+body{
+    height: 100%;
 }
 h2{
     text-transform: uppercase;
@@ -31,6 +35,13 @@ h2 span{
     }
 }
 @media  (min-width: 1025px) {
+    h2{
+        width: 30rem;
+    }
+    h2 span{
+        display: block;
+        margin-left: 20rem;  
+    }
 
 }
 

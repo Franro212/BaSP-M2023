@@ -44,5 +44,27 @@ footer {
     }
 }
 @media  (min-width: 1025px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        height: 14rem;
+        gap: 8rem;
+        background-color: var(--gray-header);
+        color: var(--white);
+    }
+    .cont-footer {
+        display: flex;
+        flex-direction: row;
+        gap: 20rem;
+    }
+    .cont-footer p {
+        color: var(--white);
+
+    }
+    .cont-footer a {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
 
 }
