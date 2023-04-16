@@ -5,7 +5,8 @@ console.log('-Exercise 3.a');
 console.log(arrayMonths1[4],arrayMonths1[10]);
 //b. Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
 console.log('-Exercise 3.b');
-console.log(arrayMonths1.sort());
+const arrayMonths2 = arrayMonths1.sort()
+console.log(arrayMonths2);
 //c. Agregar un elemento al principio y al final del array (utilizar unshift y push).
 console.log('-Exercise 3.c');
 arrayMonths1.unshift("Start of year")
@@ -18,11 +19,12 @@ arrayMonths1.pop()
 console.log(arrayMonths1);
 //e. Invertir el orden del array (utilizar reverse).
 console.log('-Exercise 3.e');
-console.log(arrayMonths1.reverse());
+arrayMonths1.reverse()
+console.log(arrayMonths1);
 //f. Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
 console.log('-Exercise 3.f');
-const arrayMonths2 = arrayMonths1.join("-")
-console.log(arrayMonths2);
+const arrayMonths3 = arrayMonths1.join("-")
+console.log(arrayMonths3);
 //g. Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
-const arrayMonths3 =  ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
-console.log(arrayMonths3.slice(4,11));
+arrayMonths1.slice(4,11);
+console.log(arrayMonths1);
