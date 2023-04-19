@@ -17,7 +17,6 @@ function suma (number2, number3) {
     }
 }
 suma("e",4)
-
 //c. Crear una función “validateInteger” que reciba un número como parámetro y devuelva verdadero si es un número entero.
 console.log('--Exercise 6.c')
 function validateInteger(number) {
@@ -35,14 +34,14 @@ function sumaValidate (number2, number3) {
             return number2 + number3
         } else {
             alert("only accepts integers")
-            return Math.round(number2,number3)
+             suma(number2,number3)
+             console.log(Math.round(number2,number3))
         }
     } else {
         alert("only accepts numbers");
         return NaN
     }
 }
-
 console.log(sumaValidate( 10,10));
 //e. Convertir la validación del ejercicio 6d) en una función separada y llamarla dentro de una nueva función probando que todo siga funcionando igual que en el apartado anterior.
 console.log('--Exercise .e')

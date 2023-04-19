@@ -18,27 +18,25 @@ console.log("--Exercise 4.b");
 // “Adulto mayor” entre 61 y 75 años;
 // “Anciano” si es mayor a 75 años.
 var age = Math.floor(Math.random() * 100);
-switch (true) {
-  case age < 2:
-    alert("Bebe");
-    break;
-  case age >= 2 && age <= 12:
-    alert("Niño");
-    break;
-  case age >= 12 && age <= 19:
-    alert("Adolescente");
-    break;
-  case age >= 20 && age <= 30:
-    alert("Joven");
-    break;
-  case age >= 31 && age <= 60:
-    alert("Adulto");
-    break;
-  case age >= 61 && age <= 75:
-    alert("Adulto mayor");
-    break;
-  default:
-    alert("Anciano");
-    break;
+if (age<0) {
+    alert("This is not exist")
+    if ( age > 0 && age < 2) {
+        alert("Bebe");
+        if (age >= 2 && age <= 12) {
+            alert("Niño");
+            if (age >= 20 && age <= 30) {
+                alert("Joven");
+                if (age >= 31 && age <= 60) {
+                    alert("Adulto");
+                    if (age >= 61 && age <= 75) {
+                        alert("Adulto mayor"); 
+                    }
+                }
+            }
+        } 
+    } 
+}
+ else { 
+        alert("Anciano");
 }
 console.log(age);
