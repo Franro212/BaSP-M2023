@@ -7,7 +7,9 @@ Live site: https://franro212.github.io/BaSP-M2023/Week-04/index.html
 
 ## First views
 <img src="./assets/image/vew-landing.jpg" alt="landing page">
+
 ## Creation process week by week
+
 In the first week, we worked in groups, divided the tasks and designed the project in Figma.
 In the second week, we started working individually, we started with html structuring the page with its semantic elements.
 Third week we corrected the HTML errors to structure and began to style the page with CSS, this week we could not use Flexbox.
