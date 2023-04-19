@@ -3,30 +3,33 @@
 
 Mega Rocket Gym is an application for managing a gym. In its first version, the application presents a landing page with information about the gym, including memberships, activities, and its history. The application is currently made only with HTML and does not require installation.
 
-# First views
+Live site: https://franro212.github.io/BaSP-M2023/Week-04/index.html
+
+## First views
 <img src="./assets/image/vew-landing.jpg" alt="landing page">
-<img src="./assets/image/vew-landing2.jpg" alt="landing page">
+## Creation process week by week
+In the first week, we worked in groups, divided the tasks and designed the project in Figma.
+In the second week, we started working individually, we started with html structuring the page with its semantic elements.
+Third week we corrected the HTML errors to structure and began to style the page with CSS, this week we could not use Flexbox.
+Fourth week we continue with CSS improving the styles and being able to use Flexbox, this week we focus on the different resolutions and start a mobile first focus.
+In the fifth week we are working on Javascript and doing exercises touching on various topics such as variables, arrays, loops and functions.
 
-# Creation process
-The creation process consists of several phases, in the first week we made the design in Figma, the second week we made the structure with HTML. Then in the next stage we focus on styling this structure only in desktop.
-In this fourth stage we made the responsive design, we use three different measures for mobile up to 600px, tablet from 601px to 1024px and desktop from 1025px up.
-
-# Technologies
+## Technologies
 
 The technologies used so far are HTML 5 and css, and later javascript will be incorporated to give it functionality.
 
 
-# How to use Mega Rocket Gym
+## How to use Mega Rocket Gym
 
 To use the application, simply open the index.html file in any web browser. From there, you can navigate through the landing page and view the information about the gym.
 
-# Credits
+## Credits
 
 Mega Rocket Gym does not use any external code or tools.
 
-# License
+## License
 
 This project is under the MIT License.
 
-# Contact
+## Contact
 If you have any questions or comments about Mega Rocket Gym, you can contact us at rossifranco748@gmail.com
