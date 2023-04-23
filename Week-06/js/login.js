@@ -106,18 +106,22 @@ window.addEventListener("load", function () {
   });
   //BUTTON SUBMIT
   login.addEventListener("submit", validateButtom);
+  function validateButtom() {
+    validatePassword();
+    validateEmail();
 
-  function validateButtom(e) {
-    e.preventDefault();
-    if (validatePassword && validateEmail) {
+    if (textError.textContent === "" && errorEmail.textContent === "") {
       alert(
-        "The password is: " + email.value + "The email is" + password.value,
+        "The password is: " +
+          passwordLogin.value +
+          "\nThe email is: " +
+          emailLogin.value,
       );
-    } else if (!validateEmail) {
-      errorEmail.textContent = textErrorEmail;
+    } else if (errorEmail.textContent !== "") {
       errorEmail.style.display = "block";
+      errorEmail.textContent = textErrorEmail;
       alert(textErrorEmail);
-    } else if (!validatePassword) {
+    } else if (textError.textContent !== "") {
       textError.textContent = "The password is incorrect";
       textError.style.display = "block";
       alert("The password is incorrect");
