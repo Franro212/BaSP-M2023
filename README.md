@@ -4,7 +4,7 @@ Mega Rocket Gym is an application for managing a gym. In its first version, the 
 
 ## Week 04
 
-Live site: https://franro212.github.io/BaSP-M2023/Week-04/index.html
+Live site: https://franro212.github.io/BaSP-M2023/Week-04/views/index.html
 
 ## First views
 
@@ -20,7 +20,7 @@ In the fifth week we are working on Javascript and doing exercises touching on v
 This week the problematic is about validation with JavaScript, we did the login and sign up with all its corresponding validation.
 
 ## Week 06
-https://franro212.github.io/BaSP-M2023/Week-06/index.html
+https://franro212.github.io/BaSP-M2023/Week-06/views/index.html
 ## Technologies
 
 The technologies used so far are HTML 5 and css, and later javascript will be incorporated to give it functionality.
