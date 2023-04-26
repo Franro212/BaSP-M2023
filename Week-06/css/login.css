@@ -34,8 +34,8 @@ form {
   justify-content: center;
   align-items: center;
 }
-form{
-    width: 80%;
+form {
+  width: 80%;
 }
 .form {
   min-width: 80%;
@@ -64,7 +64,8 @@ form input {
   width: 100%;
   height: 37px;
 }
-button {
+button,
+.go-back {
   width: 120px;
   height: 40px;
   margin-top: 30px;
@@ -73,7 +74,9 @@ button {
   border-radius: 10px;
 }
 .massageError {
-  display: none;
+  display: block;
+  width: 20rem;
+  height: 15px;
   color: red;
   font-size: 12px;
 }

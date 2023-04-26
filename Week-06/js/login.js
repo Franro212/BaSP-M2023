@@ -20,7 +20,6 @@ window.addEventListener("load", function () {
     var password = passwordLogin.value;
     // PASSWORD LENGTH
     if (password.length < 8) {
-      textError.style.display = "block";
       textError.textContent = textErrorLength;
       return;
     }
@@ -33,7 +32,6 @@ window.addEventListener("load", function () {
       }
     }
     if (number < 2) {
-      textError.style.display = "block";
       textError.textContent = textErrorNumeric;
       return;
     }
@@ -52,7 +50,6 @@ window.addEventListener("load", function () {
       }
     }
     if (specialCharacter < 1) {
-      textError.style.display = "block";
       textError.textContent = textErrorSpecial;
       return;
     }
@@ -66,7 +63,6 @@ window.addEventListener("load", function () {
       }
     }
     if (upperCase < 1) {
-      textError.style.display = "block";
       textError.textContent = textErrorUppercase;
       return;
     }
@@ -80,13 +76,12 @@ window.addEventListener("load", function () {
       }
     }
     if (lowerCase < 1) {
-      textError.style.display = "block";
       textError.textContent = textErrorLowercase;
       return;
     }
   }
   passwordLogin.addEventListener("focus", function () {
-    textError.style.display = "none";
+    textError.textContent = "";
   });
   //VALIDATE EMAIL
   emailLogin.addEventListener("blur", validateEmail);
@@ -96,13 +91,12 @@ window.addEventListener("load", function () {
     var regex = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
     if (!regex.test(email)) {
-      errorEmail.style.display = "block";
       errorEmail.textContent = textErrorEmail;
       return;
     }
   }
   emailLogin.addEventListener("focus", function () {
-    errorEmail.style.display = "none";
+    errorEmail.textContent = "";
   });
   //BUTTON SUBMIT
   login.addEventListener("submit", validateButtom);
@@ -118,12 +112,10 @@ window.addEventListener("load", function () {
           emailLogin.value,
       );
     } else if (errorEmail.textContent !== "") {
-      errorEmail.style.display = "block";
       errorEmail.textContent = textErrorEmail;
       alert(textErrorEmail);
     } else if (textError.textContent !== "") {
       textError.textContent = "The password is incorrect";
-      textError.style.display = "block";
       alert("The password is incorrect");
     }
   }

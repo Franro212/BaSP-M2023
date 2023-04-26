@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/sign-up.css" />
+    <title>Mega Rocket Gym</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../assets/image/logo-rr.ico"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="./index.html" class="logo">
+        <img src="../../assets/image/logo-rr.png" alt="logo" />
+        <p>mega rocket s.a</p>
+      </a>
+      <a href="./login.html" class="btn-header login">
+        login
+        <img
+          class="img-btn"
+          src="../../assets/image/login-icon.png"
+          alt="login"
+        />
+      </a>
+    </header>
+    <main>
+      <div class="form-register">
+        <p>Register</p>
+        <form id="formRegister">
+          <div class="first-column">
+            <label>Name</label>
+            <input id="name" type="text" />
+            <span class="massageError" id="errorName"></span>
+            <label>Last Name</label>
+            <input id="lastName" type="text" />
+            <span class="massageError" id="errorLastName"></span>
+            <label>DNI</label>
+            <input id="dni" type="text" />
+            <span class="massageError" id="errorDni"></span>
+            <label>Date of birth</label>
+            <input id="date" type="date" />
+            <span class="massageError" id="errorDate"></span>
+            <label>Phone number</label>
+            <input id="phone" type="text" />
+            <span class="massageError" id="errorPhone"></span>
+            <label>Adress</label>
+            <input id="adress" type="text" />
+            <span class="massageError" id="errorAdress"></span>
+          </div>
+          <div class="second-column">
+            <label>Location</label>
+            <input id="location" type="text" />
+            <span class="massageError" id="errorLocation"></span>
+            <label>Postal Code</label>
+            <input id="postal" type="text" />
+            <span class="massageError" id="errorPostal"></span>
+            <label>Email</label>
+            <input id="emailSignUp" type="text" />
+            <span class="massageError" id="errorEmailSignUp"></span>
+            <label>Password</label>
+            <input id="passwordSignUp" type="password" />
+            <span class="massageError" id="errorPassword"></span>
+            <label>Repeat password</label>
+            <input id="repeatPassword" type="password" />
+            <span class="massageError" id="errorPasswordRepeat"></span>
+          </div>
+          <div class="third-column">
+            <a class="go-back" href="../views/index.html">Go back</a>
+            <button type="submit">register</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+  <script src="../js/sign-up.js"></script>
+</html>
