@@ -1,6 +1,77 @@
 .form-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-width: 70%;
-  height: 90%;
+  height: 100%;
+  background-color: var(--white);
+  opacity: 0.9;
+}
+.form-register p {
+  color: var(--black);
+  font-size: 40px;
+}
+form {
+  display: flex;
+  flex-direction:column;
+  
+}
+.first-column,
+.second-column,
+.third-column {
+  display: flex;
+  flex-direction: column;
+}
+.go-back {
+  text-align: center;
+}
+
+form label {
+  height: 15px;
+  
+}
+form input {
+  width: 20rem;
+  height: 2rem;
+}
+@media (min-width: 601px) and (max-width: 1024px){
+
+  .form-register {
+    min-width: 70%;
+    height: 60%;
+  }
+.form-register p {
+  font-size: 70px;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.first-column,
+.second-column,
+.third-column {
+  display: flex;
+  flex-direction: column;
+}
+.go-back {
+  text-align: center;
+}
+
+form label {
+  height: 15px;
+}
+form input {
+  width: 20rem;
+  height: 3rem;
+}
+}
+@media (min-width: 1025px){
+
+  
+  .form-register {
+    min-width: 70%;
+    height: 90%;
   background-color: var(--white);
   opacity: 0.9;
 }
@@ -29,4 +100,5 @@ form label {
 form input {
   width: 20rem;
   height: 3rem;
+}
 }
