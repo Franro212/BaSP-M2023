@@ -1,0 +1,118 @@
+.logo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  gap: 10px;
+}
+.logo img {
+  height: 50%;
+}
+.logo p {
+  display: block;
+  width: 100%;
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: start;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../../assets/image/background-admin.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.form,
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: 80%;
+}
+.form {
+  min-width: 80%;
+  height: 46rem;
+  background-color: var(--first);
+  opacity: 0.9;
+  border-radius: 25px;
+}
+.form p {
+  font-size: 20px;
+  font-weight: bold;
+}
+form a {
+  margin-top: 10px;
+  align-self: start;
+  color: var(--black);
+  text-decoration: none;
+  font-size: 15px;
+}
+form label {
+  margin-top: 3rem;
+  align-self: start;
+  font-size: 15px;
+}
+form input {
+  width: 100%;
+  height: 37px;
+}
+button,
+.go-back {
+  width: 120px;
+  height: 40px;
+  margin-top: 30px;
+  color: var(--white);
+  background-color: var(--black);
+  border-radius: 10px;
+}
+.massageError {
+  display: block;
+  width: 20rem;
+  height: 15px;
+  color: red;
+  font-size: 12px;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .logo {
+    gap: 20px;
+  }
+  .logo img {
+    height: 60%;
+  }
+  .logo p {
+    font-size: 50px;
+  }
+  .form {
+    min-width: 60%;
+    height: 46rem;
+  }
+}
+@media (min-width: 1025px) {
+  .logo {
+    height: 100%;
+    gap: 5rem;
+  }
+  .logo img {
+    height: 90%;
+  }
+  .logo p {
+    font-size: 90px;
+    max-width: 80%;
+    margin-bottom: 30px;
+  }
+  .form {
+    min-width: 30%;
+  }
+  .form p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}

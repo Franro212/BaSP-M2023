@@ -1,0 +1,49 @@
+:root {
+    --white: #ffffff;
+    --black: #212121;
+    --first: #D5DD3C;
+    --gray-background:#535353;
+    --gray-inputs: #cccccc;
+    --gray-header:#323232;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+h2{
+   max-width: 39rem;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: bold;
+    padding: 2rem;
+    font-size: 7rem;  
+}
+h2 span {
+    color: var(--first);
+    margin-left: 16rem;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+    h2{
+        max-width: 51rem;
+        font-size: 9.5rem;  
+    }
+    h2 span {
+        display: block;
+        margin-left: 27rem;  
+    }
+}
+@media  (min-width: 1025px) {
+    h2 {
+        max-width: 40rem;
+    }
+    h2 span {
+        display: block;
+        margin-left: 20rem;  
+    }
+}
+
+
