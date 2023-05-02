@@ -26,7 +26,6 @@ window.addEventListener("load", function () {
   nameSignUp.addEventListener("blur", function () {
     validateNameLastname(nameSignUp, errorName);
   });
-  //NAME
   function validateNameLastname(maxLength, spanError) {
     var long = maxLength.value;
     if (long.length < 3) {
@@ -59,7 +58,6 @@ window.addEventListener("load", function () {
     errorLastName.textContent = "";
   });
   dniSignUp.addEventListener("blur", validateDni);
-  //DNI
   function validateDni() {
     var dni = dniSignUp.value;
     if (dni.length < 7) {
@@ -75,7 +73,6 @@ window.addEventListener("load", function () {
       }
     }
     if (!onlyNumbers) {
-
       errorDni.textContent = "*Only accepts numbers";
       return;
     }
@@ -84,7 +81,6 @@ window.addEventListener("load", function () {
     errorDni.textContent = "";
   });
   phoneNumberSignUp.addEventListener("blur", validatePhone);
-  //VALIDATE PHONE
   function validatePhone() {
     var phone = phoneNumberSignUp.value;
     if (!(phone.length === 10)) {
@@ -108,7 +104,6 @@ window.addEventListener("load", function () {
     errorPhone.textContent = "";
   });
   locationSignUp.addEventListener("blur", validateLocation);
-  //VALIDATE LOCATION
   function validateLocation() {
     var long = locationSignUp.value;
     if (long.length < 3) {
@@ -136,7 +131,6 @@ window.addEventListener("load", function () {
     errorLocation.textContent = "";
   });
   postalCodeSignUp.addEventListener("blur", validatePostal);
-  //VALIDATE POSTAL CODE
   function validatePostal() {
     var long = postalCodeSignUp.value;
     if (long.length < 4 || long.length > 5) {
@@ -175,15 +169,12 @@ window.addEventListener("load", function () {
   passwordSignUp.addEventListener("blur", function () {
     validatePassword(passwordSignUp, errorPassword);
   });
-  //VALIDATE PASSWORD
   function validatePassword(passwordInput, error) {
     var password = passwordInput.value;
-    // PASSWORD LENGTH
     if (password.length < 8) {
       error.textContent = "*The password must be at least 8 characters.";
       return;
     }
-    //NUMERIC CHARACTER
     var number = 0;
     for (i = 0; i < password.length; i++) {
       var charCode = password.charCodeAt(i);
@@ -196,25 +187,6 @@ window.addEventListener("load", function () {
         "*The password must contain at least 2 numeric characters.";
       return;
     }
-    // SPECIAL CHARACTER
-    var specialCharacter = 0;
-    for (i = 0; i < password.length; i++) {
-      var charCode = password.charCodeAt(i);
-      if (
-        (charCode >= 33 && charCode <= 47) ||
-        (charCode >= 58 && charCode <= 64) ||
-        (charCode >= 91 && charCode <= 96) ||
-        (charCode >= 123 && charCode <= 126)
-      ) {
-        specialCharacter++;
-      }
-    }
-    if (specialCharacter < 1) {
-      error.textContent =
-        "*The password must contain at least 1 special character.";
-      return;
-    }
-    // UPPERCASE LETTERS
     let upperCase = 0;
     for (let i = 0; i < password.length; i++) {
       var charCode = password.charCodeAt(i);
@@ -227,7 +199,6 @@ window.addEventListener("load", function () {
         "*The password must contain at least 1 capital letter.";
       return;
     }
-    //LOWERCASE LETTERS
     var lowerCase = 0;
     for (i = 0; i < password.length; i++) {
       var charCode = password.charCodeAt(i);
@@ -244,7 +215,6 @@ window.addEventListener("load", function () {
   passwordSignUp.addEventListener("focus", function () {
     errorPassword.textContent = "";
   });
-  //VALIDATE REPEAT PASSWORD
   repeatPasswordSignUp.addEventListener("blur", repeatPassword);
   function repeatPassword() {
     var passwordRepeat = repeatPasswordSignUp.value;
@@ -273,10 +243,67 @@ window.addEventListener("load", function () {
   adressSignUp.addEventListener("focus", function () {
     errorAdress.textContent = "";
   });
+  function formatDate(date) {
+    var d = new Date(date);
+    var year = d.getFullYear();
+    var month = ("0" + (d.getMonth() + 1)).slice(-2);
+    var day = ("0" + d.getDate()).slice(-2);
+    return `${month}/${day}/${year}`;
+  }
+
+  nameSignUp.value = localStorage.getItem("name");
+  lastNameSignUp.value = localStorage.getItem("lastname");
+  dniSignUp.value = localStorage.getItem("dni");
+  dateOfBirthSignUp.value = localStorage.getItem("dob");
+  phoneNumberSignUp.value = localStorage.getItem("phone");
+  adressSignUp.value = localStorage.getItem("adress");
+  locationSignUp.value = localStorage.getItem("city");
+  postalCodeSignUp.value = localStorage.getItem("zip");
+  emailSignUp.value = localStorage.getItem("email");
+  passwordSignUp.value = localStorage.getItem("password");
+  repeatPasswordSignUp.value = localStorage.getItem("repeatPassword");
+
+  function fetchSignUp() {
+    var date = dateOfBirthSignUp.value;
+    var formattedDated = formatDate(date);
+    const url = `https://api-rest-server.vercel.app/signup?name=${nameSignUp.value}&lastName=${lastNameSignUp.value}&dni=${dni.value}&dob=${formattedDated}&phone=${phoneNumberSignUp.value}&address=${adressSignUp.value}&city=${locationSignUp.value}&zip=${postalCodeSignUp.value}&email=${emailSignUp.value}&password=${passwordSignUp.value}`;
+    fetch(url)
+      .then((response) => {
+        if (response.ok) {
+          localStorage.setItem("name", nameSignUp.value);
+          localStorage.setItem("lastname", lastNameSignUp.value);
+          localStorage.setItem("dni", dniSignUp.value);
+          localStorage.setItem("dob", dateOfBirthSignUp.value);
+          localStorage.setItem("phone", phoneNumberSignUp.value);
+          localStorage.setItem("adress", adressSignUp.value);
+          localStorage.setItem("city", locationSignUp.value);
+          localStorage.setItem("zip", postalCodeSignUp.value);
+          localStorage.setItem("email", emailSignUp.value);
+          localStorage.setItem("password", passwordSignUp.value);
+          localStorage.setItem("repeatPassword", repeatPasswordSignUp.value);
+
+          return response.json();
+        } else {
+          return response.json();
+        }
+      })
+      .then((data) => {
+        if (data.success === true) {
+          console.log(data + "primero");
+          alert(data.success + "\n" + data.msg);
+        } else {
+          console.log(data);
+          throw new Error(data);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   formRegister.addEventListener("submit", validateForm);
-
-  function validateForm() {
+  function validateForm(e) {
+    e.preventDefault();
     validateAdress();
     validateDni();
     validateEmail();
@@ -286,6 +313,8 @@ window.addEventListener("load", function () {
     validatePassword(passwordSignUp, errorPassword);
     validatePhone();
     validatePostal();
+    var date = dateOfBirthSignUp.value;
+    var formattedDated = formatDate(date);
 
     if (
       errorName.textContent === "" &&
@@ -318,40 +347,10 @@ window.addEventListener("load", function () {
           emailSignUp.value +
           "\nThe password is: " +
           passwordSignUp.value +
-          "\nThe date of birth" +
-          dateOfBirthSignUp.value,
+          "\nThe date of birth: " +
+          formattedDated,
       );
-    } else if (errorName.textContent !== "") {
-      errorName.textContent = "The name is incorrect";
-      alert("The name is incorrect");
-    } else if (errorLastName.textContent !== "") {
-      textError.textContent = "The last name is incorrect";
-      alert("The password is incorrect");
-      alert("The last name is incorrect");
-    } else if (errorDni.textContent !== "") {
-      errorDni.textContent = "The DNI is incorrect";
-      alert("The DNI is incorrect");
-    } else if (errorPhone.textContent) {
-      errorPhone.textContent = "The phone is incorrect";
-      alert("The phone is incorrect");
-    } else if (errorAdress.textContent) {
-      errorAdress.textContent = "The adress is incorrect";
-      alert("The adress is incorrect");
-    } else if (errorLocation.textContent) {
-      errorLocation.textContent = "The location is incorrect";
-      alert("The location is incorrect");
-    } else if (errorPostal.textContent) {
-      errorPostal.textContent = "The postal code is incorrect";
-      alert("The postal code is incorrect");
-    } else if (errorEmailSignUp.textContent) {
-      errorEmailSignUp.textContent = "The email is incorrect";
-      alert("The email is incorrect");
-    } else if (errorPassword.textContent) {
-      errorPassword.textContent = "The password is incorrect";
-      alert("The password is incorrect");
-    } else if (errorPasswordRepeat.textContent) {
-      errorPasswordRepeat.textContent = "The second password is incorrect";
-      alert("The second password is incorrect");
+      fetchSignUp();
     }
   }
 });
