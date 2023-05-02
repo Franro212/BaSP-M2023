@@ -21,7 +21,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: inherit;
   background-image: url(../../assets/image/background-admin.png);
   background-position: center;
   background-size: cover;
