@@ -9,6 +9,19 @@ header {
 }
 .btn-header {
     display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 16rem;
+    background-color: var(--white);
+    color: var(--black);
+    height: 76px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
 }
 .logo {
     display: flex;
@@ -65,19 +78,6 @@ header {
     }
     .btn-header {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        width: 16rem;
-        background-color: var(--white);
-        color: var(--black);
-        height: 76px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 25px;
-        font-weight: bold;
-        border-radius: 5px;
-        text-transform: uppercase;
     }
     .logo {
         margin-left: 50px;

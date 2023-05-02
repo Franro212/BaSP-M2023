@@ -1,3 +1,15 @@
+header .btn-header {
+  display: block;
+  width: 70px;
+  height: 40px;
+  font-size: 15px;
+}
+header .img-btn {
+  height: 20px;
+}
+.logo p {
+  min-width: 70%;
+}
 .form-register {
   display: flex;
   flex-direction: column;
@@ -6,6 +18,7 @@
   height: 100%;
   background-color: var(--white);
   opacity: 0.9;
+  margin: 2rem;
 }
 .form-register p {
   color: var(--black);
@@ -16,23 +29,44 @@ form {
   flex-direction: column;
 }
 .first-column,
-.second-column,
-.third-column {
+.second-column {
   display: flex;
   flex-direction: column;
 }
-.go-back {
-  text-align: center;
-}
-
 form label {
   height: 15px;
 }
 form input {
-  width: 20rem;
+  width: 95%;
   height: 2rem;
 }
+.cont-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.cont button {
+  align-self: center;
+  width: 95%;
+  margin: 1.5rem;
+}
+.cont input {
+  width: 95%;
+}
 @media (min-width: 601px) and (max-width: 1024px) {
+  header .btn-header {
+    width: 100px;
+    height: 50px;
+  }
+  header .img-btn {
+    height: 30px;
+  }
   .form-register {
     min-width: 70%;
     height: 60%;
@@ -40,42 +74,34 @@ form input {
   .form-register p {
     font-size: 70px;
   }
-  form {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
+  form label {
+    height: 10px;
+    margin: 5px;
   }
-  .first-column,
-  .second-column,
-  .third-column {
-    display: flex;
+  .cont-form {
     flex-direction: column;
   }
-  .go-back {
-    text-align: center;
-  }
-
-  form label {
-    height: 15px;
-  }
-  form input {
-    width: 20rem;
-    height: 3rem;
-  }
+  
 }
 @media (min-width: 1025px) {
+   header .btn-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 16rem;
+    height: 76px;
+    font-size: 25px;
+  }
+  header .img-btn {
+    height: 50px;
+  }
   .form-register {
     min-width: 70%;
-    background-color: var(--white);
-    opacity: 0.9;
+    margin: 3rem;
   }
   .form-register p {
-    color: var(--black);
     font-size: 80px;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
   }
   .first-column,
   .second-column {
@@ -83,31 +109,18 @@ form input {
     flex-direction: column;
     width: 50%;
   }
-  .go-back {
-    text-align: center;
-  }
-
-  form label {
-    height: 15px;
-  }
   form input {
     width: 90%;
     height: 3rem;
   }
   .cont-form {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
   }
   .cont {
-    display: flex;
     flex-direction: column;
-    width: 100%;
   }
-  .cont a,
-  button {
-    align-self: center;
+  .cont button {
     width: 50%;
   }
+ 
 }
