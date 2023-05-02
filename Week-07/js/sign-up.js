@@ -289,15 +289,39 @@ window.addEventListener("load", function () {
       })
       .then((data) => {
         if (data.success === true) {
-          console.log(data + "primero");
-          alert(data.success + "\n" + data.msg);
+          alert(
+            data.success +
+              "\n" +
+              data.msg +
+              "\nThe name is: " +
+              nameSignUp.value +
+              "\nThe last name is: " +
+              lastNameSignUp.value +
+              "\nThe DNI is: " +
+              dniSignUp.value +
+              "\nThe phone is: " +
+              phoneNumberSignUp.value +
+              "\nThe adress is: " +
+              adressSignUp.value +
+              "\nThe location is: " +
+              locationSignUp.value +
+              "\nThe postal code is: " +
+              postalCodeSignUp.value +
+              "\nThe email is: " +
+              emailSignUp.value +
+              "\nThe password is: " +
+              passwordSignUp.value +
+              "\nThe date of birth: " +
+              formattedDated,
+          );
         } else {
-          console.log(data);
-          throw new Error(data);
+          throw new Error(data.errors[0].msg);
         }
       })
+
       .catch((error) => {
         console.log(error);
+        alert(error);
       });
   }
 
@@ -313,9 +337,6 @@ window.addEventListener("load", function () {
     validatePassword(passwordSignUp, errorPassword);
     validatePhone();
     validatePostal();
-    var date = dateOfBirthSignUp.value;
-    var formattedDated = formatDate(date);
-
     if (
       errorName.textContent === "" &&
       lastNameSignUp.textContent === "" &&
@@ -328,28 +349,6 @@ window.addEventListener("load", function () {
       errorPassword.textContent === "" &&
       errorPasswordRepeat.textContent === ""
     ) {
-      alert(
-        "The name is: " +
-          nameSignUp.value +
-          "\nThe last name is: " +
-          lastNameSignUp.value +
-          "\nThe DNI is: " +
-          dniSignUp.value +
-          "\nThe phone is: " +
-          phoneNumberSignUp.value +
-          "\nThe adress is: " +
-          adressSignUp.value +
-          "\nThe location is: " +
-          locationSignUp.value +
-          "\nThe postal code is: " +
-          postalCodeSignUp.value +
-          "\nThe email is: " +
-          emailSignUp.value +
-          "\nThe password is: " +
-          passwordSignUp.value +
-          "\nThe date of birth: " +
-          formattedDated,
-      );
       fetchSignUp();
     }
   }

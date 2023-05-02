@@ -87,14 +87,23 @@ window.addEventListener("load", function () {
         }
       })
       .then((data) => {
-        if (data) {
-          alert(data.success + "\n" + data.msg);
+        if (data.success === true) {
+          alert(
+            data.success +
+              "\n" +
+              data.msg +
+              "\n" +
+              "The password is: " +
+              passwordLogin.value +
+              "\nThe email is: " +
+              emailLogin.value,
+          );
         } else {
-          throw new Error();
+          throw new Error(data.msg);
         }
       })
       .catch((error) => {
-        alert(error.msg);
+        alert(error);
       });
   }
   function validateButtom(e) {
