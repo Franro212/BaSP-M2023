@@ -318,9 +318,7 @@ window.addEventListener("load", function () {
           throw new Error(data.errors[0].msg);
         }
       })
-
       .catch((error) => {
-        console.log(error);
         alert(error);
       });
   }
